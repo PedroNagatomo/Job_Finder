@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
+
+.search-container {
+  margin: 2rem 0;
+}
+
+.search-bar {
+  margin-bottom: 0.875rem;
+}
+
+.search-inputs {
+  display: flex;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border: 1px solid #ebe9e4;
+  border-radius: 14px;
+  padding: 0.625rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.search-inputs:focus-within {
+  box-shadow: 0 4px 16px rgba(186, 117, 23, 0.12);
+  border-color: #d4b483;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  color: #1a1814;
+  background: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: #b0ada8;
+  font-weight: 300;
+}
+
+.search-input:focus {
+  outline: none;
+  background: #faf9f6;
+}
+
+.search-button {
+  padding: 10px 22px;
+  background-color: #1a1814;
+  color: #f5f3ef;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+.search-button:hover:not(:disabled) {
+  background-color: #ba7517;
+  transform: scale(1.01);
+}
+
+.search-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.search-button:disabled {
+  background-color: #d6d3ce;
+  color: #a0a09a;
+  cursor: not-allowed;
+}
+
+/* Refresh bar */
+.refresh-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1.125rem;
+  background-color: #faf9f6;
+  border: 1px solid #ebe9e4;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.refresh-button {
+  padding: 9px 18px;
+  background-color: #1a1814;
+  color: #f5f3ef;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.refresh-button:hover:not(:disabled) {
+  background-color: #ba7517;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(186, 117, 23, 0.25);
+}
+
+.refresh-button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.refresh-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.refresh-icon {
+  display: inline-block;
+  transition: transform 0.35s ease;
+  font-size: 0.95rem;
+}
+
+.refresh-button:hover:not(:disabled) .refresh-icon {
+  transform: rotate(180deg);
+}
+
+.refresh-hint {
+  color: #9c9890;
+  font-size: 0.85rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Loading spin */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.refresh-button:disabled .refresh-icon {
+  animation: spin 0.8s linear infinite;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .search-inputs {
+    background: #1e1c18;
+    border-color: #2e2c28;
+  }
+
+  .search-inputs:focus-within {
+    border-color: #5a4a28;
+  }
+
+  .search-input {
+    color: #f0ede8;
+  }
+
+  .search-input:focus {
+    background: #252320;
+  }
+
+  .search-button,
+  .refresh-button {
+    background-color: #e4a93c;
+    color: #1a1814;
+  }
+
+  .search-button:hover:not(:disabled),
+  .refresh-button:hover:not(:disabled) {
+    background-color: #f0bc55;
+  }
+
+  .search-button:disabled {
+    background-color: #2e2c28;
+    color: #5a5854;
+  }
+
+  .refresh-container {
+    background-color: #1e1c18;
+    border-color: #2e2c28;
+  }
+
+  .refresh-hint {
+    color: #6b6860;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .search-inputs {
+    flex-direction: column;
+    border-radius: 12px;
+  }
+
+  .refresh-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,720 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.profile-modal {
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #ebe9e4;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+  border-radius: 20px 20px 0 0;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1a1814;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #8a8780;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background: #f5f3ef;
+  color: #1a1814;
+}
+
+.profile-progress {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #f0ede8;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #f5f3ef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ba7517, #e4a93c);
+  transition: width 0.5s ease;
+  border-radius: 4px;
+}
+
+.progress-text {
+  font-size: 0.85rem;
+  color: #6b6860;
+}
+
+.section-tabs {
+  display: flex;
+  padding: 1rem 1rem 0;
+  gap: 0.5rem;
+  border-bottom: 1px solid #f0ede8;
+  overflow-x: auto;
+}
+
+.tab-btn {
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #8a8780;
+  transition: all 0.2s;
+  white-space: nowrap;
+  font-family: "DM Sans", sans-serif;
+}
+
+.tab-btn:hover {
+  color: #1a1814;
+}
+
+.tab-btn.active {
+  color: #ba7517;
+  border-bottom-color: #ba7517;
+  font-weight: 500;
+}
+
+.profile-form {
+  padding: 2rem;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1a1814;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ebe9e4;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: "DM Sans", sans-serif;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  background: #faf9f6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #ba7517;
+  box-shadow: 0 0 0 3px rgba(186, 117, 23, 0.1);
+  background: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f0ede8;
+}
+
+.reset-btn {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: 1px solid #ebe9e4;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #8a8780;
+  transition: all 0.2s;
+  font-family: "DM Sans", sans-serif;
+}
+
+.reset-btn:hover {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #dc2626;
+}
+
+.save-btn {
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #ba7517, #e4a93c);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  font-family: "DM Sans", sans-serif;
+}
+
+.save-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(186, 117, 23, 0.3);
+}
+
+.success-message {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.success-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.success-message h3 {
+  color: #1a1814;
+  margin: 0 0 0.5rem;
+}
+
+.success-message p {
+  color: #8a8780;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .profile-modal {
+    background: #1e1c18;
+  }
+
+  .modal-header {
+    background: #1e1c18;
+    border-bottom-color: #2e2c28;
+  }
+
+  .modal-header h2 {
+    color: #f0ede8;
+  }
+
+  .close-btn {
+    color: #9c9890;
+  }
+
+  .close-btn:hover {
+    background: #252320;
+    color: #f0ede8;
+  }
+
+  .profile-progress {
+    border-bottom-color: #2a2824;
+  }
+
+  .progress-bar {
+    background: #252320;
+  }
+
+  .progress-text {
+    color: #9c9890;
+  }
+
+  .section-tabs {
+    border-bottom-color: #2a2824;
+  }
+
+  .tab-btn {
+    color: #9c9890;
+  }
+
+  .tab-btn:hover {
+    color: #f0ede8;
+  }
+
+  .tab-btn.active {
+    color: #e4a93c;
+    border-bottom-color: #e4a93c;
+  }
+
+  .form-group label {
+    color: #f0ede8;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background: #13120f;
+    border-color: #2e2c28;
+    color: #f0ede8;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: #e4a93c;
+    background: #1a1814;
+  }
+
+  .form-actions {
+    border-top-color: #2a2824;
+  }
+
+  .reset-btn {
+    border-color: #2e2c28;
+    color: #9c9890;
+  }
+
+  .reset-btn:hover {
+    background: #2a1010;
+    border-color: #4a1818;
+  }
+
+  .success-message h3 {
+    color: #f0ede8;
+  }
+
+  .success-message p {
+    color: #9c9890;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Seção de Upload de Currículo */
+.resume-upload-section {
+  width: 100%;
+}
+
+.resume-upload-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.resume-upload-header h3 {
+  margin: 0 0 0.5rem;
+  color: #1a1814;
+  font-size: 1.2rem;
+}
+
+.resume-upload-header p {
+  color: #8a8780;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* Área de Upload */
+.upload-area {
+  border: 2px dashed #d4b483;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #fef8ec;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.upload-area:hover {
+  border-color: #ba7517;
+  background: #fef3e0;
+}
+
+.upload-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.upload-area p {
+  color: #6b6860;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #ba7517, #e4a93c);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  transition: all 0.2s;
+}
+
+.upload-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(186, 117, 23, 0.3);
+}
+
+.upload-status {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.upload-status.success {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.upload-status.error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Currículo enviado */
+.uploaded-resume {
+  background: #faf9f6;
+  border: 1px solid #ebe9e4;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.resume-file-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.file-icon {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 12px;
+}
+
+.file-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.file-details strong {
+  color: #1a1814;
+  font-size: 0.95rem;
+}
+
+.file-details span {
+  color: #8a8780;
+  font-size: 0.85rem;
+}
+
+.upload-date {
+  font-style: italic;
+}
+
+.resume-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.replace-btn,
+.remove-resume-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  font-family: "DM Sans", sans-serif;
+}
+
+.replace-btn {
+  background: #667eea;
+  color: white;
+}
+
+.replace-btn:hover {
+  background: #5a67d8;
+}
+
+.remove-resume-btn {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.remove-resume-btn:hover {
+  background: #fee2e2;
+}
+
+/* Dicas de currículo */
+.resume-tips {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f5f3ef;
+  border-radius: 12px;
+  border: 1px solid #ebe9e4;
+}
+
+.resume-tips h4 {
+  margin: 0 0 0.75rem;
+  color: #1a1814;
+  font-size: 0.95rem;
+}
+
+.resume-tips ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resume-tips li {
+  padding: 0.35rem 0;
+  color: #6b6860;
+  font-size: 0.85rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.resume-tips li::before {
+  content: "•";
+  position: absolute;
+  left: 0.5rem;
+  color: #ba7517;
+  font-weight: bold;
+}
+
+/* Badge de currículo no progresso */
+.resume-status-badge {
+  display: inline-block;
+  background: #ecfdf5;
+  color: #065f46;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  border: 1px solid #a7f3d0;
+}
+
+/* Field hint */
+.field-hint {
+  font-size: 0.8rem;
+  color: #8a8780;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Dark mode para upload */
+@media (prefers-color-scheme: dark) {
+  .resume-upload-header h3 {
+    color: #f0ede8;
+  }
+
+  .upload-area {
+    background: #1a1814;
+    border-color: #5a4a28;
+  }
+
+  .upload-area:hover {
+    background: #252320;
+    border-color: #ba7517;
+  }
+
+  .uploaded-resume {
+    background: #1a1814;
+    border-color: #2e2c28;
+  }
+
+  .file-details strong {
+    color: #f0ede8;
+  }
+
+  .resume-tips {
+    background: #1a1814;
+    border-color: #2e2c28;
+  }
+
+  .resume-tips h4 {
+    color: #f0ede8;
+  }
+
+  .resume-status-badge {
+    background: #064e3b;
+    color: #a7f3d0;
+    border-color: #065f46;
+  }
+
+  .replace-btn {
+    background: #5a67d8;
+  }
+
+  .remove-resume-btn {
+    background: #2a1010;
+    border-color: #4a1818;
+  }
+}
+
+.section-tabs {
+  display: flex;
+  padding: 1rem 1rem 0.5rem;
+  gap: 0.5rem;
+  border-bottom: 1px solid #f0ede8;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  
+  /* Forçar esconder scrollbar padrão e usar a personalizada */
+  scrollbar-width: thin !important;
+  scrollbar-color: #ba7517 #f5f3ef !important;
+  
+  /* Esconder completamente a scrollbar padrão do Firefox */
+  scrollbar-width: thin;
+}
+
+/* ESCONDER SCROLLBAR PADRÃO - Webkit */
+.section-tabs::-webkit-scrollbar {
+  width: 0px !important;
+  height: 6px !important;
+  background: transparent !important;
+  -webkit-appearance: none !important;
+}
+
+.section-tabs::-webkit-scrollbar-track {
+  background: #f5f3ef !important;
+  border-radius: 3px !important;
+  margin: 0 10px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.section-tabs::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #ba7517, #e4a93c) !important;
+  border-radius: 3px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  min-height: 6px !important;
+}
+
+.section-tabs::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #a06514, #d4952e) !important;
+}
+
+/* Remover setas da scrollbar */
+.section-tabs::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.section-tabs::-webkit-scrollbar-corner {
+  background: transparent !important;
+}
+
+/* Firefox - forçar cores */
+.section-tabs {
+  scrollbar-color: #ba7517 #f5f3ef !important;
+  scrollbar-width: thin !important;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .section-tabs {
+    border-bottom-color: #2a2824;
+    scrollbar-color: #ba7517 #1e1c18 !important;
+  }
+  
+  .section-tabs::-webkit-scrollbar-track {
+    background: #1e1c18 !important;
+  }
+  
+  .section-tabs::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #854f0b, #ba7517) !important;
+  }
+  
+  .section-tabs::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #a06514, #d4952e) !important;
+  }
+}

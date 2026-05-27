@@ -1,0 +1,12 @@
+com\jobapi\JobApiApplication.class
+com\jobapi\service\JobAggregatorService.class
+com\jobapi\service\JobScraperService.class
+com\jobapi\service\IntelligentMatchingService.class
+com\jobapi\config\CorsConfig.class
+com\jobapi\config\WebConfig.class
+com\jobapi\controller\JobController.class
+com\jobapi\controller\ResumeController.class
+com\jobapi\model\MatchResult.class
+com\jobapi\model\Job.class
+com\jobapi\model\Resume.class
+com\jobapi\service\ResumeParserService.class

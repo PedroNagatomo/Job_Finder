@@ -1,0 +1,12 @@
+E:\Projects\Job-Finder\job-api\src\main\java\com\jobapi\service\JobAggregatorService.java
+E:\Projects\Job-Finder\job-api\src\main\java\com\jobapi\controller\JobController.java
+E:\Projects\Job-Finder\job-api\src\main\java\com\jobapi\model\MatchResult.java
+E:\Projects\Job-Finder\job-api\src\main\java\com\jobapi\model\Job.java
+E:\Projects\Job-Finder\job-api\src\main\java\com\jobapi\config\WebConfig.java
+E:\Projects\Job-Finder\job-api\src\main\java\com\jobapi\controller\ResumeController.java
+E:\Projects\Job-Finder\job-api\src\main\java\com\jobapi\JobApiApplication.java
+E:\Projects\Job-Finder\job-api\src\main\java\com\jobapi\service\JobScraperService.java
+E:\Projects\Job-Finder\job-api\src\main\java\com\jobapi\service\ResumeParserService.java
+E:\Projects\Job-Finder\job-api\src\main\java\com\jobapi\model\Resume.java
+E:\Projects\Job-Finder\job-api\src\main\java\com\jobapi\config\CorsConfig.java
+E:\Projects\Job-Finder\job-api\src\main\java\com\jobapi\service\IntelligentMatchingService.java
