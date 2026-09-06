@@ -5,51 +5,56 @@
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.1.5-6DB33F?logo=spring-boot)
 ![Docker](https://img.shields.io/badge/Docker-✓-2496ED?logo=docker)
 
-Encontre vagas de múltiplas fontes e candidate-se com **1 clique**!
+Find job openings from multiple sources and apply with **one click**!
 
-## ✨ Funcionalidades
+<img width="1647" height="898" alt="113131313131313311111111111111111111111111111111111111113333333331" src="https://github.com/user-attachments/assets/e6ddffab-a4c8-4a0a-b875-5330811628b6" />
 
-- 🔍 **Busca Multi-fontes**: LinkedIn, Indeed, Google Jobs, InfoJobs, Programathor
-- ⚡ **Candidatura Rápida**: Candidate-se com 1 clique
-- 🤖 **Match Inteligente**: Score de compatibilidade com IA
-- 🎤 **Simulador de Entrevista**: Pratique com IA
-- 📄 **Upload de Currículo**: Encontre vagas compatíveis
-- 🌙 **Dark Mode**: Tema escuro completo
-- 📱 **Responsivo**: Mobile e Desktop
-- 🐳 **Docker**: Containerização completa
+## ✨ Features
 
-## 🚀 Tecnologias
+- 🔍 **Multi-Source Search**: LinkedIn, Indeed, Google Jobs, InfoJobs, Programathor
+- ⚡ **Quick Applications**: Apply with one click
+- 🤖 **Smart Matching**: AI-powered compatibility score
+- 🎤 **Interview Simulator**: Practice with AI
+- 📄 **Resume Upload**: Find matching job openings
+- 🌙 **Dark Mode**: Full dark theme
+- 📱 **Responsive**: Mobile and desktop support
+- 🐳 **Docker**: Full containerization
+
+## 🚀 Technologies
 
 ### Frontend
+
 - React 19
 - Vite
 - Axios
 - CSS Modules
 
 ### Backend
+
 - Java 17
 - Spring Boot 3.1.5
 - Jsoup (Web Scraping)
 - Maven
 
-### Infraestrutura
+### Infrastructure
+
 - Docker
 - Docker Compose
 - Nginx
 
-## 📦 Instalação
+## 📦 Installation
 
-### Com Docker (Recomendado)
+### With Docker (Recommended)
 
 ```bash
-# Clonar o repositório
-git clone https://github.com/SEU_USERNAME/job-finder.git
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/job-finder.git
 cd job-finder
 
-# Iniciar com Docker Compose
+# Start with Docker Compose
 docker-compose up --build -d
 
-# Acessar
+# Access
 # Frontend: http://localhost
 # API: http://localhost:8080/api/health
 ```
